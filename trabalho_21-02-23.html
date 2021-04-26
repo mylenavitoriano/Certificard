@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="port-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho JS - 23/02</title>
+</head>
+<body>
+
+<script>
+
+document.write("<br>--------------------------Exercício 1-------------------------<br><br>");
+/*Escreva um algoritmo para ler o salário mensal atual de um funcionário
+e o percentual de reajuste. Calcular e escrever o valor do novo salário.*/
+
+
+salario = Number(prompt("Digite o seu salário mensal: "));
+
+percentual = Number(prompt("Digite o percentual de reajuste: "));
+
+reajuste = ((percentual / 100) * salario) + salario;
+
+alert ("O novo salário será R$" + reajuste);
+document.write("O novo salário será R$" + reajuste);
+
+document.write("<br><br>--------------------------Exercício 2-------------------------<br><br>");
+/*O custo de um carro novo ao consumidor é a soma do custo de fábrica
+ com a porcentagem do distribuidor e dos impostos (aplicados ao custo de fábrica). 
+ Considere que o percentual do distribuidor seja de 28% e os impostos de 45%, 
+ escrever um algoritmo para ler o custo de fábrica de um carro, calcular e 
+ escrever o custo final ao consumidor.*/
+
+custoFab = Number(prompt("Forneça o custo de fábrica do carro: "));
+
+percDist = 28/100 * custoFab;
+percImp = 45/100 * custoFab;
+
+custoFinal = percDist + percImp + custoFab;
+
+alert("O custo total do carro novo é de R$" + custoFinal);
+document.write("O custo total do carro novo é de R$" + custoFinal);
+
+
+document.write("<br><br>--------------------------Exercício 3-------------------------<br><br>");
+/*Uma revendedora de carros usados paga a seus funcionários vendedores um salário fixo por mês, 
+mais uma comissão também fixa para cada carro vendido e mais 5% do valor total das vendas por ele efetuadas. 
+Escrever um algoritmo que leia o número de carros por ele vendidos, o valor total de suas vendas, 
+o salário fixo e o valor que ele recebe por carro vendido. Calcule e escreva o salário final do vendedor*/
+
+salarioFixo = Number(prompt("Digite o valor do seu salário fixo: "));
+comissao = Number(prompt("Digite o valor da comissão paga por cada carro vendido: "));
+carros = Number(prompt("Digite quantos carros foi vendido: "));
+vendas = Number(prompt("Digite o valor total das vendas efetuadas: "));
+
+totalComissao = comissao * carros;
+totalVendas = (5/100) * vendas;
+
+salarioFinal = totalVendas + totalComissao + salarioFixo;
+
+alert("O salário final será de R$" + salarioFinal);
+document.write("O salário final será de R$" + salarioFinal);
+
+
+document.write("<br><br>--------------------------Exercício 4-------------------------<br><br>");
+/*A jornada de trabalho semanal de um funcionário é de 40 horas. O funcionário que trabalhar 
+mais de 40 horas receberá hora extra, cujo cálculo é o valor da hora regular com um acréscimo de 50%. 
+Escreva um algoritmo que leia o número de horas trabalhadas em um mês, o salário por hora e escreva
+o salário total do funcionário, que deverá ser acrescido das horas extras, caso tenham sido trabalhadas 
+(considere que o mês possua 4 semanas exatas). */
+
+horasMensal = Number(prompt("Digite o valor das horas trabalhadas em um mês: "));
+salarioHora = Number(prompt("Digite o valor pago pela hora trabalhada: "));
+
+semanal = horasMensal / 4;
+
+if (semanal > 40){
+    salarioTotal = horasMensal * (salarioHora * 0.50);
+    alert("O seu salário total é R$" + salarioTotal);
+    document.write("O seu salário total é R$" + salarioTotal);
+}
+else if (semanal <= 40){
+    salarioTotal = horasMensal * salarioHora;
+    alert("O seu salário total é R$" + salarioTotal);
+    document.write("O seu salário total é R$" + salarioTotal);}
+
+document.write("<br><br>--------------------------Exercício 5-------------------------<br><br>");
+/*Faça um algoritmo para ler: quantidade atual em estoque, quantidade máxima em estoque 
+e quantidade mínima em estoque de um produto. Calcular e escrever a quantidade média 
+((quantidade média = quantidade máxima + quantidade mínima) /2). 
+Se a quantidade em estoque for maior ou igual a quantidade média escrever a mensagem 
+'Não efetuar compra', senão escrever a mensagem 'Efetuar compra'.*/
+
+maximo = Number(prompt("Escreva a quantidade máxima em estoque: "));
+minimo = Number(prompt("Escreva a quantidade mínima em estoque: "));
+atual = Number(prompt("Digite a quantidade atual em estoque: "));
+
+media = (maximo + minimo) / 2;
+
+    document.write("Quantidade média do estoque: " + media);
+
+if (atual >= media){
+    alert(`Quantidade média do estoque: ${media} 
+    Não efetuar compra`);
+    document.write("<br>Não efetuar compra");
+} else { 
+    alert(`Quantidade média do estoque: ${media} 
+    Efetuar compra`);
+    document.write("<br>Efetuar compra");
+}
+
+
+</script>
+    
+</body>
+</html>

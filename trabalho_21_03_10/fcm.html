@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="port-BR">
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FMC</title>
+
+    <style>
+         #res{
+            font-size: 25px;
+        }
+        #h1{
+            background-color:#9EF0D0;
+		    font-size:30px;
+            text-align: center;
+        }
+        #p1{
+            font-size: 17px;
+        }
+    </style>
+</head>
+<body>
+
+    <ul class="nav nav-tabs-light" style="background-color:#6DA690; font-size:18px">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html" style="color:white; background-color:#287055; font-size: 20px">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="imc.html" style="color:white">IMC</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="tmb.html" style="color:white">TBM</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="fcm.html" style="color:white">FCM</a>
+        </li>
+      </ul>
+
+    <div id="h1"> Frequência Cardíaca Máxima- FMC </div>
+    <br>
+
+    <div id="p1"><div class="container-fluid">
+
+        <div class="row">
+            <div class="col-md-8">
+                <h3> O que é o FCM?</h3>
+                <div id="p1">A Frequência Cardíaca Máxima (FCM) é o número máximo de batimentos que o seu coração é capaz de efetuar num minuto. 
+                    Além de testes laboratoriais para verificar a FCM de um indivíduo, há algumas fórmulas para estimá-la.<br><br>
+                    Porém, para não sobrecarregar seu coração e garantir um maior controlo do treino, os especialistas 
+                    recomendam que sejam respeitadas as diferentes “zonas de treino”, de acordo com seu nível de 
+                    atividade física e objetivos.<br><br>
+                    O aumento da carga durante um exercício físico aumenta, de forma proporcional, a frequência cardíaca 
+                    do indivíduo até que esta chegue a um valor máximo, que não pode ser ultrapassado por aumentos na 
+                    carga e nem por adaptações ao treino.
+                </div><br><br>
+                <h3>Calculadora FCM</h3><br>
+                <p>Digite sua idade:
+                <input type="number" name="num1" id="num1"></p>
+            </div>
+            <div class="col-md-4">
+                <center><img src="batimento2.jpg" alt="Imagem Responsiva" width="260px" height="400px" class="img-fluid" class="rounded float-left"></center>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-1">
+                <button type="button" class="btn btn-info" value="CALCULAR" onclick="calcular()">Calcular</button>
+            </div>
+            <div class="col-md-5">
+                <div id="res"></div>
+            </div>
+        </div>
+    </div>
+    
+
+<script>
+
+    function calcular(){
+        var n1 = window.document.getElementById('num1');
+        i = Number(n1.value);
+
+        contaFcm = 206.9 - (0.67 * i);
+        fcm = parseFloat(contaFcm.toFixed(2));
+
+            res.innerHTML=`Sua Frequência Cardiaca Máxima é <strong> ${fcm} bpm <strong>`;
+        
+
+        
+    }
+</script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    
+</body>
+</html>
