@@ -1,2 +1,2 @@
 # Certificard
-Certificado digital do curso ImersãoDev Alura.
+Certificado digital da ImersãoDev Alura.
