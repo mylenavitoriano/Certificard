@@ -1,5 +1,5 @@
 body{
-    background-color: #3D2E9E;
+    background-color: #AAC4DD;
     font-family:'Roboto', sans-serif;
     }
 
@@ -32,7 +32,7 @@ body{
     div {
     font-size: 18px;
     padding: 15px;
-    background-color: #E6DEFF;
+    background-color: #e8f0f8;
     border-radius: 5px;
     }
     div h2{
@@ -48,4 +48,13 @@ body{
     display: block;
     transform: translateY(-50%);
     border: 8px solid white;
+    }
+
+    a{
+        text-decoration: none;
+        color:#3b454e
+    }
+
+    li{
+        color: #3b454e;
     }
